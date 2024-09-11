@@ -1,27 +1,18 @@
-import React from "react";
-import Link from "next/link";
-import Icons from "../global/icons";
-import { buttonVariants } from "../ui/button";
+import { Container, Icons } from "@/components";
+import { buttonVariants } from "@/components/ui/button";
 import { UserButton, } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
+import Link from "next/link";
+
 const Navbar = async () => {
 
     const user = await currentUser();
-    const handleScroll = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest'
-          });
-        }
-      };
+
     return (
         <header className="px-4 h-14 sticky top-0 inset-x-0 w-full bg-background/40 backdrop-blur-lg border-b border-border z-50">
-            
+            <Container reverse>
                 <div className="flex items-center justify-between h-full mx-auto md:max-w-screen-xl">
-                    <div className="flex items-start">
+                <div className="flex items-start">
                     <Link href="/" className="flex items-center gap-2">
                         <span className="text-2xl font-thin">
                             <span className="text-blue-600 font-bold">A</span>ssignmate
@@ -51,7 +42,7 @@ const Navbar = async () => {
                         )}
                     </div>
                 </div>
-            
+            </Container>
         </header>
     )
 };

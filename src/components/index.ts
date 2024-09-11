@@ -1,14 +1,18 @@
-import Icons from "./global/icons";
-import Container from "./global/container";
-import Wrapper from './global/wrapper';
+import Providers from "./providers/providers";
+import ThemeProvider from "./providers/theme-provider";
 import Navbar from "./navigation/navbar";
+import Footer from "./navigation/footer";
 
-
+import Icons from "./global/icons";
+import Wrapper from "./global/wrapper";
+import Container from "./global/container";
 
 export {
-    Icons,
+    Providers,
+    ThemeProvider,
     Navbar,
-    Container,
+    Icons,
     Wrapper,
-
+    Footer,
+    Container,
 }
