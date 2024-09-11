@@ -2,10 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Icons from "../global/icons";
 import { buttonVariants } from "../ui/button";
-
+import { UserButton, } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 const Navbar = async () => {
 
-    const user = false;
+    const user = await currentUser();
     const handleScroll = (id) => {
         const element = document.getElementById(id);
         if (element) {
