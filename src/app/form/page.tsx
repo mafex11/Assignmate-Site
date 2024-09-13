@@ -40,7 +40,7 @@ function Form() {
 
     formData.append('file', acceptedFiles[0]);
     formData.append('upload_preset', process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET || '');
-    formData.append('api_key', process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY);
+    formData.append('api_key', process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY|| '');
 
     const results = await fetch(`https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`, {
       method: 'POST',
@@ -81,7 +81,7 @@ function Form() {
               {
                 isDragActive ?
                   <p>Drop the files here ...</p> :
-                  <p>Drag 'n' drop some files here, or click to select files</p>
+                  <p>Drag-n drop some files here, or click to select files</p>
               }
             </div>
           </FormRow>
