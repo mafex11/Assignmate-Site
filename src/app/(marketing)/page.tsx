@@ -18,7 +18,7 @@ const HomePage = () => {
     const secondRow = reviews.slice(reviews.length / 2);
 
     return (
-        <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
+        <div className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
 
 
             {/* hero */}
@@ -349,7 +349,7 @@ const HomePage = () => {
                 </Container>
             </Wrapper>
 
-        </section>
+        </div>
     )
 };
 
