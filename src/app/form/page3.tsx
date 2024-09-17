@@ -1,3 +1,4 @@
+
 "use client";
 import { useCallback, useEffect, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
@@ -15,36 +16,31 @@ function Form() {
   const [preview, setPreview] = useState<string | ArrayBuffer | null>(null);
   const [isClient, setIsClient] = useState(false);  // Track client-side rendering
   const [error, setError] = useState<string | null>(null);  // Track error messages
-  const [acceptedFiles, setAcceptedFiles] = useState<File[]>([]);
 
   useEffect(() => {
     setIsClient(true);  // Ensure the code runs only on the client
   }, []);
 
-  const onDrop = useCallback((acceptedFiles: File[]) => {
+  const onDrop = useCallback((acceptedFiles: Array<File>) => {
     try {
-      setAcceptedFiles(acceptedFiles);
-      
-      acceptedFiles.forEach(file => {
-        const reader = new FileReader();
+      const file = new FileReader();
 
-        reader.onload = function () {
-          setPreview(this.result);
-        };
+      file.onload = function () {
+        setPreview(file.result);
+      };
 
-        reader.onerror = () => {
-          setError('Error reading file');
-        };
+      file.onerror = () => {
+        setError('Error reading file');
+      };
 
-        reader.readAsDataURL(file);
-      });
+      file.readAsDataURL(acceptedFiles[0]);
     } catch (error) {
       console.error('Error handling file drop:', error);
-      setError('Error processing files. Please try again.');
+      setError('Error processing file. Please try again.');
     }
   }, []);
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  const { acceptedFiles, getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     onError: (err) => setError('Error with file upload. Please try again.'),  // Catch any Dropzone-specific errors
   });
@@ -52,7 +48,7 @@ function Form() {
   async function handleOnSubmit(e: React.SyntheticEvent) {
     e.preventDefault();
   
-    if (acceptedFiles.length === 0) return;
+    if (typeof acceptedFiles[0] === 'undefined') return;
   
     const formData = new FormData();
     
@@ -61,11 +57,9 @@ function Form() {
     formData.append('email', email);
     formData.append('message', message);
     
-    // Append files
-    acceptedFiles.forEach(file => {
-      formData.append('file', file);
-    });
-
+    // Append file
+    formData.append('file', acceptedFiles[0]);
+  
     try {
       const response = await fetch('/api/saveFormData', {
         method: 'POST',
@@ -82,6 +76,7 @@ function Form() {
       console.error('Error during form submission:', error);
     }
   }
+  
 
   // Prevent server-side rendering by returning null if not on the client
   if (!isClient) {
@@ -116,7 +111,7 @@ function Form() {
           </FormRow>
 
           <FormRow className="mb-5">
-            <FormLabel htmlFor="image">Images</FormLabel>
+            <FormLabel htmlFor="image">Image</FormLabel>
             <div {...getRootProps()}>
               <input {...getInputProps()} />
               {isDragActive ? <p>Drop the files here...</p> : <p>Drag-n-drop some files here, or click to select files</p>}
@@ -124,18 +119,9 @@ function Form() {
           </FormRow>
 
           {preview && (
-            <div className="grid grid-cols-3 gap-4 mt-4">
-              {Array.isArray(preview) 
-                ? preview.map((img, index) => (
-                  <div key={index} className="relative w-full">
-                    <img src={img as string} alt={`Image ${index + 1}`} className="w-full h-auto object-cover" />
-                  </div>
-                ))
-                : (
-                  <img src={preview as string} alt="Upload preview" className="w-full h-auto object-cover" />
-                )
-              }
-            </div>
+            <p className="mb-5">
+              <img src={preview as string} alt="Upload preview" />
+            </p>
           )}
 
           <Button>Submit</Button>
