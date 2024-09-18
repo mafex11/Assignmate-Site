@@ -196,7 +196,7 @@ function Form() {
               </div>
             )}
 
-            <Button type="submit">Submit</Button>
+            <Button className="submit">Submit</Button>
           </form>
         )}
       </Container>
