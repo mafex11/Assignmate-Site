@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] h-screen">
+    <div className="">
       <Nav />
       <main>{ children }</main>
       <Footer />
