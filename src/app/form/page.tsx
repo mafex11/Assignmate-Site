@@ -32,7 +32,7 @@ function Form() {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    multiple: true, // Enable multiple file uploads
+    multiple: true,
     onError: (err) => setError("Error with file upload. Please try again."),
   });
 
@@ -62,6 +62,7 @@ function Form() {
     formData.append("name", name);
     formData.append("email", email);
     formData.append("message", message);
+  
 
     acceptedFiles.forEach((file) => {
       formData.append("file", file);
