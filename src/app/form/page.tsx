@@ -99,6 +99,7 @@ function Form() {
         {formSubmitted ? ( // Conditionally render success message or form
           <div className="text-white text-center">
             <h1 className="text-3xl font-medium">Form submitted successfully, we will get back to you soon!</h1>
+            <p className="mt-4 text-lg text-blue-400">While you wait, why not subscribe to our newsletter for extra discounts?</p>
           </div>
         ) : (
           <form

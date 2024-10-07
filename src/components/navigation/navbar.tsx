@@ -12,9 +12,18 @@ const Navbar = async () => {
     return (
         <header className="px-4 h-14 sticky top-0 inset-x-0 w-full bg-background/40 backdrop-blur-lg border-b border-border z-50">
             <Container reverse>
+                
                 <div className="flex items-center justify-between h-full mx-auto md:max-w-screen-xl">
                 <div className="flex items-start">
+                {/* <div className="md:hidden menuButton mt-1 mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+                            <path d="M4 5L16 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M4 19L12 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                </div> */}
                     <Link href="/" className="flex items-center gap-2">
+                    
                         <span className="text-2xl font-thin">
                             <span className="text-blue-600 font-bold">A</span>ssignmate
                         </span>
