@@ -4,7 +4,7 @@ const FormDataSchema = new mongoose.Schema({
   name: String,
   email: String,
   message: String,
-  imageUrl: [{ type: String }],  // Allow array of URLs
+  imageUrl: [{ type: String }],  
   createdAt: {
     type: Date,
     default: Date.now

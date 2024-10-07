@@ -16,23 +16,23 @@ const contact = () => {
         <div className="flex flex-col items-center w-full">
             <Navbar/>
         <div className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
-        
+
 
             {/* hero */}
             <Wrapper>
                 <div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 h-[150vh]" />
 
-                
+
             </Wrapper>
 
-           
-            
-            
+
+
+
 
             <Wrapper className="flex flex-col items-center justify-center py-12 relative">
             <div className="absolute top-1/2 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 h-3/4 -translate-y-1/2 inset-0 blur-[10rem] opacity-40"></div>
                     <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
-                            
+
                     </div>
             <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
                 <Container>
@@ -58,14 +58,14 @@ const contact = () => {
         <div className="mt-20">
             <Form/>
         </div>
-        
+
     </div>
 </Container>
 
 
             </Wrapper>
             <Wrapper className="flex flex-col items-center justify-center py-12 relative mt-40 ">
-                
+
                 <Container className="relative z-[999999] ">
                     <div className="flex items-center justify-center w-full -mt-40  ">
                         <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between w-full px-4 md:px-8 rounded-lg lg:rounded-2xl border border-border/80 py-4 md:py-8 shadow-2xl shadow-black">
@@ -100,13 +100,13 @@ const contact = () => {
                     </div>
                 </Container>
             </Wrapper>
-            
+
 
 
         </div>
         <Footer/>
         </div>
-        
+
     )
 }
 
