@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/button";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Input } from "@/components/ui/input";
 import {Footer} from "@/components";
+import Newsletter from "../newsletter/page";
+
 const pricing = () => {
 
     return (
@@ -34,9 +36,7 @@ const pricing = () => {
             {/* pricing */}
             <Wrapper className="flex flex-col items-center justify-center py-12 relative ">
             <div className=" absolute top-2/3 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 h-2/4 -translate-y-3/4 inset-0 blur-[5rem] opacity-60"></div>
-                    <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
-                            
-                    </div>
+                    
             <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
                 <Container>
                     <div className="max-w-md mx-auto text-start md:text-center shadow-2xl shadow-black/40">
@@ -103,42 +103,17 @@ const pricing = () => {
 
 
             </Wrapper>
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative mt-20">
-                
-                <Container className="relative z-[999999]">
-                    <div className="flex items-center justify-center w-full -mt-40">
-                        <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between w-full px-4 md:px-8 rounded-lg lg:rounded-2xl border border-border/80 py-4 md:py-8 shadow-2xl shadow-black">
-                            <div className="flex flex-col items-start gap-4 w-full">
-                                <h4 className="text-xl md:text-2xl font-semibold">
-                                    Join our newsletter
-                                </h4>
-                                <p className="text-base text-muted-foreground">
-                                    For special offers and updates, Join now.
-                                </p>
-                            </div>
-                            <div className="flex flex-col items-start gap-2 md:min-w-80 mt-5 md:mt-0 w-full md:w-max">
-                                <form action="#" className="flex flex-col md:flex-row items-center gap-2 w-full md:max-w-xs">
-                                    <Input
-                                        required
-                                        type="email"
-                                        placeholder="Enter your email"
-                                        className="focus-visible:ring-0 focus-visible:ring-transparent focus-visible:border-primary duration-300 w-full"
-                                    />
-                                    <Button type="submit" size="sm" variant="secondary" className="w-full md:w-max">
-                                        Subscribe
-                                    </Button>
-                                </form>
-                                <p className="text-xs text-muted-foreground">
-                                    By subscribing you agree with our{" "}
-                                    <Link href="#">
-                                        Privacy Policy
-                                    </Link>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </Container>
-            </Wrapper>
+            <div className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 mt-20">
+        <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+        <Container className="relative z-[999999]">
+          <div className="flex items-center justify-center w-full -mt-40">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between w-full px-4 md:px-8 rounded-lg lg:rounded-2xl border border-border/80 py-4 md:py-8 shadow-2xl shadow-black ">
+              <Newsletter/>
+            </div>
+          </div>
+        </Container>
+      </Wrapper>
+        </div>
             
 
 

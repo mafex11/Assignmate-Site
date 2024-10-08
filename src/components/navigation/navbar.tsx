@@ -3,7 +3,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { UserButton, } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import Link from "next/link";
-
+import { SparklesText } from "@/components/ui/sparkletext";
 
 const Navbar = async () => {
 
@@ -23,10 +23,17 @@ const Navbar = async () => {
                         </svg>
                 </div> */}
                     <Link href="/" className="flex items-center gap-2">
-                    
-                        <span className="text-2xl font-thin">
+                        <div>
+            <SparklesText
+                text="Assignmate"
+                className="custom-class"
+                sparklesCount={10}
+                colors={{ first: "#004ff8", second: "#00b4d4" }} 
+            />
+        </div>
+                        {/* <span className="text-2xl font-thin">
                             <span className="text-blue-600 font-bold">A</span>ssignmate
-                        </span>
+                        </span> */}
                         </Link>
                     </div>
                     <nav className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">

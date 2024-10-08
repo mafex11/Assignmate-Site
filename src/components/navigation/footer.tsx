@@ -19,30 +19,30 @@ const Footer = () => {
                             </h3>
                             <ul className="mt-4 text-sm text-muted-foreground">
                                 <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
+                                    <Link href="/features" className="hover:text-foreground transition-all duration-300">
                                         Features
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
+                                    <Link href="/pricing" className="hover:text-foreground transition-all duration-300">
                                         Pricing
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
+                                    <Link href="/about" className="hover:text-foreground transition-all duration-300">
                                         About
                                     </Link>
                                 </li>
-                                <li className="mt-2">
+                                {/* <li className="mt-2">
                                     <Link href="" className="hover:text-foreground transition-all duration-300">
                                         Integration
                                     </Link>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         <div className="mt-10 md:mt-0 flex flex-col">
                             <h3 className="text-base font-medium text-white">
-                                Integrations
+                                Socials
                             </h3>
                             <ul className="mt-4 text-sm text-muted-foreground">
                                 <li className="">
@@ -72,17 +72,17 @@ const Footer = () => {
                             </h3>
                             <ul className="mt-4 text-sm text-muted-foreground">
                                 <li className="">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
+                                    <Link href="/about" className="hover:text-foreground transition-all duration-300">
                                         About Us
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
+                                    <Link href="/privacypolicy" className="hover:text-foreground transition-all duration-300">
                                         Privacy Policy
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
+                                    <Link href="/termsandcondition" className="hover:text-foreground transition-all duration-300">
                                         Terms & Conditions
                                     </Link>
                                 </li>
