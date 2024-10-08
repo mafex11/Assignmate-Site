@@ -42,6 +42,7 @@ const Navbar = async () => {
                             <Link href="/about" className="hover:text-foreground/80 text-sm">About</Link>
                             <Link href="/features" className="hover:text-foreground/80 text-sm">Features</Link>
                             <Link href="/contact" className="hover:text-foreground/80 text-sm">Contact</Link>
+                            <Link href="/customrequest" className="hover:text-foreground/80 text-sm">Custom Request</Link>
                         </ul>
                     </nav>
                     <div className="flex items-center gap-4">
