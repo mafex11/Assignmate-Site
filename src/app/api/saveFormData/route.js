@@ -41,11 +41,11 @@ export async function POST(req) {
       // Prepare formData for Cloudinary
       const cloudinaryFormData = new globalThis.FormData();
       cloudinaryFormData.append('file', file);
-      cloudinaryFormData.append('upload_preset', 'assignmate');
-      cloudinaryFormData.append('api_key', '329738488717522');
+      cloudinaryFormData.append('upload_preset', process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET);
+      cloudinaryFormData.append('api_key', process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY);
 
       try {
-        const cloudinaryRes = await fetch(`https://api.cloudinary.com/v1_1/deow6cqgi/${resourceType}/upload`, {
+        const cloudinaryRes = await fetch(`https://api.cloudinary.com/v1_1/NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME/${resourceType}/upload`, {
           method: 'POST',
           body: cloudinaryFormData,
         });
