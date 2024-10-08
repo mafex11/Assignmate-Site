@@ -131,7 +131,7 @@ function Form() {
             </FormRow>
 
             <FormRow className="mb-5">
-              <FormLabel htmlFor="message">Message</FormLabel>
+              <FormLabel htmlFor="message">Requirements & Message</FormLabel>
               <InputText
                 id="message"
                 name="message"
@@ -142,7 +142,7 @@ function Form() {
             </FormRow>
 
             <FormRow className="mb-5">
-              <FormLabel htmlFor="file">Files</FormLabel>
+              <FormLabel htmlFor="file">Please upload files regarding assignment</FormLabel>
               <div
                 {...getRootProps()}
                 className={`border-dashed ${

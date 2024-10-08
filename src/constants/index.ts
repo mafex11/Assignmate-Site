@@ -59,7 +59,8 @@ export const pricingCards = [
         duration: "1 Assignment",
         highlight: "Key features",
         buttonText: "Buy",
-        features: ["5 days deadline", "1 Team member","1 Page( 255 words)", "No revision"],
+        buttonHref:"https://rzp.io/rzp/uxOwEaV",
+        features: ["5 days deadline", "1 Team member","1 Page( 255 words)", "No revision","Support and updates"],
         priceId: "",
     },
     {
@@ -69,7 +70,8 @@ export const pricingCards = [
         duration: "3 assignment kit",
         highlight: "Key features",
         buttonText: "Buy",
-        features: ["3 day deadline", "5 Team members", "1 Page( 255 words)", "Support and updates"],
+        buttonHref:"https://rzp.io/rzp/GMZ0aWM6",
+        features: ["3 day deadline", "5 Team members", "1 Page( 255 words)", "1 Revision", "Support and updates"],
         priceId: "price_1OYxkqFj9oKEERu1KfJGWxgN",
     },
     {
@@ -79,8 +81,20 @@ export const pricingCards = [
         duration: "month",
         highlight: "Everything in Starter, plus",
         buttonText: "Buy",
-        features: ["1 day deadline", "Multiple Team members", "1 Page( 255 words)", "Priority support (24/7)"],
+        buttonHref:"https://rzp.io/rzp/ZbfxYAk",
+        features: ["1 day deadline", "Multiple Team members", "1 Page( 255 words)", "2 Revision", "Priority support (24/7)"],
         priceId: "price_1OYxkqFj9oKEERu1NbKUxXxN",
+    },
+    {
+        title: "Custom",
+        description: "Perfect to fit your needs.",
+        price: "Quote your price",
+        duration: "1 Assignment",
+        highlight: "Key features",
+        buttonText: "Form",
+        buttonHref:"/customrequest",
+        features: ["Please fill the form", "Multiple Team members","1 Page( 255 words)", "Revision available", "Priority support (24/7)"],
+        priceId: "",
     },
 ];
 
