@@ -41,7 +41,7 @@ export const features = [
     },
     {
         icon: Icons.shop,
-        title: "Delivering Assignments Since 2020",
+        title: "Delivering Assignments Since 2014",
         info: "Started small in quarantine Grew into a major company.",
     },
     {
