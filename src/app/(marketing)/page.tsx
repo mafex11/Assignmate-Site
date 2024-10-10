@@ -184,7 +184,7 @@ const HomePage = () => {
             </Wrapper>
 
             
-<Wrapper className="flex flex-col items-center justify-center py-12 relative md:hidden">
+            <Wrapper className="flex flex-col items-center justify-center py-12 relative ">
             <div className=" absolute top-2/3 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 h-2/4 -translate-y-3/4 inset-0 blur-[5rem] opacity-60"></div>
                     
             <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
@@ -207,7 +207,7 @@ const HomePage = () => {
                             </div>
                 </Container>
                 <Container className="flex items-center justify-center">
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full md:gap-8 py-10 md:py-20 flex-wrap max-w-4xl">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 w-full md:gap-8 py-10 md:py-20 flex-wrap max-w-6xl">
         {pricingCards.map((card) => (
             <Card
                 key={card.title}
@@ -235,17 +235,14 @@ const HomePage = () => {
                     ))}
                 </CardContent>
                 <CardFooter className="mt-auto">
-                    <Link
-                        href="#"
-                        className={cn(
-                            "w-full text-center text-primary-foreground bg-primary p-2 rounded-md text-sm font-medium",
-                            card.title !== "Unlimited Saas" && "!bg-foreground !text-background",
-                            "cursor-pointer"
-                        )}
-                    >
-                        {card.buttonText}
-                    </Link>
-                </CardFooter>
+    <Link href={card.buttonHref} className={cn(
+        "w-full text-center text-primary-foreground bg-primary p-2 rounded-md text-sm font-medium",
+        card.title !== "Unlimited Saas" && "!bg-foreground !text-background",
+        "cursor-pointer"
+    )}>
+        {card.buttonText}
+    </Link>
+</CardFooter>
             </Card>
         ))}
     </div>
