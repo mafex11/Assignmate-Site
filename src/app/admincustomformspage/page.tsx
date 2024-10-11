@@ -88,7 +88,7 @@ const FormsPage = () => {
       {sortedForms.length === 0 ? (
         <p className="text-lg text-gray-600">No forms submitted yet.</p>
       ) : (
-        <ul className="w-full max-w-xl space-y-4">
+        <ul className="w-full min-w-lg max-w-3xl space-y-4">
           {sortedForms.map(form => (
             <li key={form._id} className="border rounded-lg p-4 shadow-md bg-black">
               <h2 className="text-xl font-semibold">{form.name}</h2>
