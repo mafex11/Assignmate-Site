@@ -88,14 +88,14 @@ const FormsPage = () => {
       {sortedForms.length === 0 ? (
         <p className="text-lg text-gray-600">No forms submitted yet.</p>
       ) : (
-        <ul className="w-full min-w-lg max-w-3xl space-y-4">
+        <ul className="w-full max-w-2xl min-w-md space-y-4 px-6 py-2">
           {sortedForms.map(form => (
             <li key={form._id} className="border rounded-lg p-4 shadow-md bg-black">
               <h2 className="text-xl font-semibold">{form.name}</h2>
               <p className="text-gray-400">Email: <span className="text-gray-300 font-medium">{form.email}</span></p>
               <p className="text-gray-400">
                 Message: 
-                <span className="font-medium block text-gray-300 break-words">{form.message}</span>
+                <span className="font-medium block text-gray-300 break-words max-w-md overflow-hidden overflow-ellipsis">{form.message}</span>
               </p>
               <p className="text-gray-400">Date Submitted: <span className="text-gray-300 font-medium">{new Date(form.createdAt).toLocaleDateString()}</span></p>
               <h3 className="text-lg font-semibold mt-2">Attached Files:</h3>
