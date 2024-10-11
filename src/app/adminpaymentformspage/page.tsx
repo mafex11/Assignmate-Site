@@ -66,13 +66,15 @@ const PaymentFormsPage = () => {
 
   // Sorting function to toggle between sorting by date
   const sortFormsByDate = () => {
-    const sortedForms = [...paymentForms].sort((a, b) => {
-      const dateA = new Date(a.createdAt).getTime();
-      const dateB = new Date(b.createdAt).getTime();
-      return sortedByDate ? dateA - dateB : dateB - dateA; // Toggle between ascending and descending
+    setPaymentForms(prevForms => {
+      const sortedForms = [...prevForms].sort((a, b) => {
+        const dateA = new Date(a.createdAt).getTime();
+        const dateB = new Date(b.createdAt).getTime();
+        return sortedByDate ? dateB - dateA : dateA - dateB; // Sort newest first when sortedByDate is true
+      });
+      setSortedByDate(!sortedByDate); // Toggle the sorting order
+      return sortedForms;
     });
-    setPaymentForms(sortedForms);
-    setSortedByDate(!sortedByDate);
   };
 
   return (

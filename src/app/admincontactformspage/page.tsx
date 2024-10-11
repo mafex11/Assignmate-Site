@@ -14,6 +14,7 @@ interface ContactFormData {
 
 const ContactFormsPage = () => {
   const [contactForms, setContactForms] = useState<ContactFormData[]>([]);
+  const [sortedByDate, setSortedByDate] = useState(true); // State for sorting order
 
   useEffect(() => {
     const fetchContactForms = async () => {
@@ -24,8 +25,7 @@ const ContactFormsPage = () => {
           isTagged: false, // Initialize to false
         }));
         setContactForms(formsWithTags);
-        // Restore tagged state from localStorage
-        restoreTaggedState(formsWithTags);
+        restoreTaggedState(formsWithTags); // Restore tagged state from localStorage
       } catch (error) {
         console.error('Error fetching contact form data', error);
       }
@@ -62,9 +62,26 @@ const ContactFormsPage = () => {
     });
   };
 
+  // Sorting function to toggle between sorting by date
+  const sortFormsByDate = () => {
+    const sortedForms = [...contactForms].sort((a, b) => {
+      const dateA = new Date(a.createdAt).getTime();
+      const dateB = new Date(b.createdAt).getTime();
+      return sortedByDate ? dateA - dateB : dateB - dateA; // Toggle between ascending and descending
+    });
+    setContactForms(sortedForms);
+    setSortedByDate(!sortedByDate);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center p-4 md:p-8">
       <h1 className="text-3xl font-bold mb-6">Contact Form Submissions</h1>
+      <button
+        onClick={sortFormsByDate}
+        className="mb-4 px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-700 transition duration-300"
+      >
+        {sortedByDate ? 'Sort by Oldest' : 'Sort by Newest'}
+      </button>
       {contactForms.length === 0 ? (
         <p className="text-lg text-gray-600">No contact forms submitted yet.</p>
       ) : (

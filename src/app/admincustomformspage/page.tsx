@@ -15,7 +15,7 @@ interface FormData {
 
 const FormsPage = () => {
   const [forms, setForms] = useState<FormData[]>([]);
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc'); // State for sorting order
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'); // Default to 'desc' for newest first
 
   useEffect(() => {
     const fetchForms = async () => {
@@ -83,7 +83,7 @@ const FormsPage = () => {
         onClick={handleSortOrderChange}
         className="mb-4 px-4 py-2 bg-blue-500 text-white rounded-lg transition duration-300"
       >
-        Sort by Date: {sortOrder === 'asc' ? 'Ascending' : 'Descending'}
+        Sort by Date: {sortOrder === 'asc' ? 'Newest' : 'Oldest'}
       </button>
       {sortedForms.length === 0 ? (
         <p className="text-lg text-gray-600">No forms submitted yet.</p>
