@@ -13,7 +13,7 @@ const Newsletter = () => {
     e.preventDefault();
 
     try {
-      await axios.post('/api/newsletter', { email });
+      await axios.post('/api/newsletterapi', { email });
       setSuccessMessage('Thank you for subscribing!');
       setEmail('');
     } catch (error: any) {
