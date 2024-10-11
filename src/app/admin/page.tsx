@@ -9,7 +9,7 @@ import FormsPage from "../admincustomformspage/page"; // Import the Custom Reque
 import ContactFormsPage from "../admincontactformspage/page"; // Import the Contact Forms Page
 import NewsletterPage from "../adminnewsletterpage/page"; // Import the Newsletter Page
 
-const Pricing = () => {
+const Admin = () => {
   const [activeTab, setActiveTab] = useState("payment");
 
   return (
@@ -19,12 +19,12 @@ const Pricing = () => {
         
         {/* Hero Section (Optional) */}
         <div>
-          <div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 h-[100vh]" />
+          <div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,)] -z-10 h-full]" />
         </div>
 
         {/* Tab Menu */}
         <div className="flex flex-col items-center justify-center py-12 relative">
-          <div className="flex space-x-4 mb-6">
+          <div className="flex space-x-6 mb-6">
             <button
               className={`px-4 py-2 ${activeTab === "payment" ? "bg-blue-500 text-white" : "bg-gray-200 text-black"} rounded-md`}
               onClick={() => setActiveTab("payment")}
@@ -66,4 +66,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default Admin;

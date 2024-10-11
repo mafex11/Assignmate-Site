@@ -99,9 +99,9 @@ const ContactFormsPage = () => {
               <button
                 onClick={() => toggleTag(form._id)}
                 className={`mt-4 px-4 py-2 rounded-lg transition duration-300 w-36 
-                  ${form.isTagged ? 'bg-green-500 text-white' : 'bg-red-600 text-gray-200 hover:bg-gray-500'}`}
+                  ${form.isTagged ? 'bg-green-500 text-white' : 'bg-red-600 text-gray-200 hover:bg-gray-500 w-36'}`}
               >
-                {form.isTagged ? 'Reviewed' : 'Pending Review'}
+                {form.isTagged ? 'Done' : 'Pending'}
               </button>
             </li>
           ))}
