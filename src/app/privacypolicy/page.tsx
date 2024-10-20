@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Newsletter from "../newsletter/page";
+
 const PrivacyPolicy = () => {
   return (
     <div className="flex flex-col items-center w-full">
@@ -24,27 +25,26 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-semibold">1. Information We Collect</h2>
             <p className="text-justify font-light">
               We collect personal information that you voluntarily provide when you use our services, including but not limited to:
-              <ul className="list-disc list-inside pl-5">
-                <li>Name</li>
-                <li>Email Address</li>
-                <li>Phone Number</li>
-                <li>Payment Information</li>
-                <li>Assignment Details and Requirements</li>
-              </ul>
-              We also collect non-personally identifiable information automatically when you visit our website, such as your IP address, browser type, and usage data through cookies and similar technologies.
             </p>
+            <ul className="list-disc list-inside pl-5 mb-4">
+              <li>Name</li>
+              <li>Email Address</li>
+              <li>Phone Number</li>
+              <li>Payment Information</li>
+              <li>Assignment Details and Requirements</li>
+            </ul>
 
             <h2 className="text-2xl font-semibold">2. How We Use Your Information</h2>
             <p className="text-justify font-light">
               We use the information we collect to:
-              <ul className="list-disc list-inside pl-5">
-                <li>Provide and manage the services you request.</li>
-                <li>Process payments and provide customer support.</li>
-                <li>Improve our services and enhance your experience on our website.</li>
-                <li>Communicate with you regarding your orders and services.</li>
-                <li>Ensure compliance with legal obligations.</li>
-              </ul>
             </p>
+            <ul className="list-disc list-inside pl-5 mb-4">
+              <li>Provide and manage the services you request.</li>
+              <li>Process payments and provide customer support.</li>
+              <li>Improve our services and enhance your experience on our website.</li>
+              <li>Communicate with you regarding your orders and services.</li>
+              <li>Ensure compliance with legal obligations.</li>
+            </ul>
 
             <h2 className="text-2xl font-semibold">3. Data Security</h2>
             <p className="text-justify font-light">
@@ -64,13 +64,13 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-semibold">6. Your Rights</h2>
             <p className="text-justify font-light">
               You have the following rights regarding your personal information:
-              <ul className="list-disc list-inside pl-5">
-                <li>Access: You can request access to the personal information we hold about you.</li>
-                <li>Correction: You can request correction of inaccurate or incomplete personal information.</li>
-                <li>Deletion: You can request the deletion of your personal information under certain circumstances.</li>
-                <li>Opt-out: You can opt out of receiving promotional emails.</li>
-              </ul>
             </p>
+            <ul className="list-disc list-inside pl-5 mb-4">
+              <li>Access: You can request access to the personal information we hold about you.</li>
+              <li>Correction: You can request correction of inaccurate or incomplete personal information.</li>
+              <li>Deletion: You can request the deletion of your personal information under certain circumstances.</li>
+              <li>Opt-out: You can opt out of receiving promotional emails.</li>
+            </ul>
 
             <h2 className="text-2xl font-semibold">7. Cookies and Tracking Technologies</h2>
             <p className="text-justify font-light">
@@ -101,17 +101,16 @@ const PrivacyPolicy = () => {
 
         {/* Subscription Section */}
         <div className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-20">
-        <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-        <Container className="relative z-[999999]">
-          <div className="flex items-center justify-center w-full -mt-40">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between w-full px-4 md:px-8 rounded-lg lg:rounded-2xl border border-border/80 py-4 md:py-8 shadow-2xl shadow-black ">
-              <Newsletter/>
-            </div>
-          </div>
-        </Container>
-      </Wrapper>
+          <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+            <Container className="relative z-[999999]">
+              <div className="flex items-center justify-center w-full -mt-40">
+                <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between w-full px-4 md:px-8 rounded-lg lg:rounded-2xl border border-border/80 py-4 md:py-8 shadow-2xl shadow-black ">
+                  <Newsletter />
+                </div>
+              </div>
+            </Container>
+          </Wrapper>
         </div>
-
       </div>
       <Footer />
     </div>

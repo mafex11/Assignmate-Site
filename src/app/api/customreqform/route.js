@@ -3,24 +3,17 @@ import FormDataModel from '../../../../models/FormData';
 
 export async function POST(req) {
   try {
-    // Step 1: Connect to MongoDB
-    try {
-      await connectToDatabase();
-    } catch (error) {
-      console.error('Database connection error:', error);
-      return new Response(JSON.stringify({ error: 'Failed to connect to the database' }), { status: 500 });
-    }
+    await connectToDatabase();
 
-    // Step 2: Parse request body
-    let name, email, message, files = [];
+    let name, email, message, price, files = [];
     try {
       const formData = await req.formData();
       name = formData.get('name');
       email = formData.get('email');
       message = formData.get('message');
-      files = formData.getAll('file');  // Multiple files
+      price = formData.get('price'); // Get price from the form data
+      files = formData.getAll('file');
     } catch (error) {
-      console.error('Error parsing request body:', error);
       return new Response(JSON.stringify({ error: 'Invalid request body' }), { status: 400 });
     }
 
@@ -28,17 +21,11 @@ export async function POST(req) {
       return new Response(JSON.stringify({ error: 'No files provided' }), { status: 400 });
     }
 
-    // Allowed file extensions for raw types
-    const rawFileExtensions = ['docx', 'pdf', 'txt', 'ppt', 'doc'];
-    
+    // Upload files to Cloudinary (unchanged)
     let uploadedFiles = [];
     for (const file of files) {
-      const fileExtension = file.name.split('.').pop().toLowerCase(); // Get file extension and normalize to lowercase
-
-      // Set resourceType based on file extension
-      const resourceType = rawFileExtensions.includes(fileExtension) ? 'raw' : 'auto';  // Detect raw files
-
-      // Prepare formData for Cloudinary
+      const fileExtension = file.name.split('.').pop().toLowerCase();
+      const resourceType = ['docx', 'pdf', 'txt', 'ppt', 'doc'].includes(fileExtension) ? 'raw' : 'auto';
       const cloudinaryFormData = new globalThis.FormData();
       cloudinaryFormData.append('file', file);
       cloudinaryFormData.append('upload_preset', 'assignmate');
@@ -50,35 +37,28 @@ export async function POST(req) {
           body: cloudinaryFormData,
         });
         const cloudinaryResponse = await cloudinaryRes.json();
-
-        if (!cloudinaryResponse.secure_url) {
-          throw new Error('Cloudinary upload failed');
-        }
-
-        uploadedFiles.push(cloudinaryResponse.secure_url);  // Add uploaded file URL to the array
+        uploadedFiles.push(cloudinaryResponse.secure_url);
       } catch (error) {
-        console.error('Cloudinary upload error:', error);
         return new Response(JSON.stringify({ error: 'Failed to upload file to Cloudinary' }), { status: 500 });
       }
     }
 
-    // Step 3: Save form data with multiple files to MongoDB
+    // Save form data with price
     try {
       const newFormData = new FormDataModel({
         name,
         email,
         message,
-        imageUrl: uploadedFiles,  // Save array of file URLs
+        price, // Include price
+        imageUrl: uploadedFiles,
       });
 
       await newFormData.save();
       return new Response(JSON.stringify({ success: true, data: newFormData }), { status: 200 });
     } catch (error) {
-      console.error('Error saving form data to MongoDB:', error);
       return new Response(JSON.stringify({ error: 'Failed to save form data' }), { status: 500 });
     }
   } catch (error) {
-    console.error('Unexpected server error:', error);
     return new Response(JSON.stringify({ error: 'Server encountered an error' }), { status: 500 });
   }
 }

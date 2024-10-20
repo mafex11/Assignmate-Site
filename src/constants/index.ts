@@ -4,7 +4,7 @@ export const perks = [
     {
         icon: Icons.auth,
         title: "Sign Up",
-        info: "Create your free account to get started with Assignmate.",
+        info: "Create your free account to get started with Assignmoto.",
     },
     {
         icon: Icons.customize,
@@ -55,7 +55,7 @@ export const pricingCards = [
     {
         title: "Starter",
         description: "Perfect for trying our services.",
-        price: "$15",
+        price: "$9.99",
         duration: "1 Assignment",
         highlight: "Key features",
         buttonText: "Buy",
@@ -66,7 +66,7 @@ export const pricingCards = [
     {
         title: "Kit",
         description: "The ultimate Assignment kit.",
-        price: "$20",
+        price: "$14.99",
         duration: "3 assignment kit",
         highlight: "Key features",
         buttonText: "Buy",
@@ -77,7 +77,7 @@ export const pricingCards = [
     {
         title: "Urgent",
         description: "The 11:59pm Submission.",
-        price: "$30",
+        price: "$19.99",
         duration: "month",
         highlight: "Everything in Starter, plus",
         buttonText: "Buy",

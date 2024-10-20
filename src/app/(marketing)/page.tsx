@@ -50,7 +50,7 @@ const HomePage = () => {
                         </Link>
 
                         <div className="flex flex-col items-center mt-8 max-w-5xl w-11/12 md:w-full">
-                        <BlurIn className="text-4xl text-centre md:text-6xl lg:textxl md:!leading-snug font-semibold bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent" word="High-Quality, 100% Handwritten Assignments & Essays for Students." duration={1} />
+                        <BlurIn className="text-4xl text-centre md:text-6xl lg:textxl md:!leading-snug font-semibold bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent" word="High-Quality, 100% Hand-typed Assignments & Essays for Students." duration={1} />
                             {/* <h1 className="text-4xl md:text-6xl lg:textxl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
                             High-Quality, 100% Handwritten Assignments & Essays for Students.
                             </h1> */}

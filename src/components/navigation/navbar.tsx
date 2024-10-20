@@ -25,7 +25,7 @@ const Navbar = async () => {
                     <Link href="/" className="flex items-center gap-2">
                         <div>
             <SparklesText
-                text="Assignmate"
+                text="Assignmoto"
                 className="custom-class"
                 sparklesCount={10}
                 colors={{ first: "#004ff8", second: "#00b4d4" }} 
@@ -45,7 +45,7 @@ const Navbar = async () => {
                             <Link href="/customrequest" className="hover:text-foreground/80 text-sm">Custom Request</Link>
                         </ul>
                     </nav>
-                    <div className="flex items-center gap-4">
+                    {/* <div className="flex items-center gap-4">
                         {user ? (
                             <UserButton />
                         ) : (
@@ -58,7 +58,11 @@ const Navbar = async () => {
                                 </Link>
                             </>
                         )}
+                    </div> */}
+                    <div className="flex items-center gap-4 text-blue-500">
+                        Assignmoto@gmail.com
                     </div>
+
                 </div>
             </Container>
         </header>

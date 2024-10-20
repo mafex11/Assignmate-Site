@@ -43,7 +43,7 @@ const pricing = () => {
                             Discover our powerful plans
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Assignmate offers a range of plans and customization to help you with your assignments.
+                            Assignmoto offers a range of plans and customization to help you with your assignments.
                         </p>
                         
                     </div>

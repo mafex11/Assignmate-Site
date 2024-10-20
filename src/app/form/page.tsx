@@ -18,7 +18,8 @@ function Form() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false); // Track loading state
   const [formSubmitted, setFormSubmitted] = useState(false); // Track form submission status
-
+  const [price, setPrice] = useState("");
+  
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -39,18 +40,8 @@ function Form() {
   async function handleOnSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    if (!email&&!name) {
-      setError("Name and email is required.");
-      return;
-    }
-
-    if (!email) {
-      setError("Email is required.");
-      return;
-    }
-
-    if (!name) {
-      setError("Name is required.");
+    if (!email || !name || !price) {
+      setError("Name, email, and price are required.");
       return;
     }
 
@@ -62,6 +53,7 @@ function Form() {
     formData.append("name", name);
     formData.append("email", email);
     formData.append("message", message);
+    formData.append("price", price); 
   
 
     acceptedFiles.forEach((file) => {
@@ -138,6 +130,17 @@ function Form() {
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+              />
+            </FormRow>
+
+            <FormRow className="mb-5">
+              <FormLabel htmlFor="price">Quote Your Price</FormLabel> {/* Price input */}
+              <InputText
+                id="price"
+                name="price"
+                type="number"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
               />
             </FormRow>
 

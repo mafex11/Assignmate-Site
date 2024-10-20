@@ -45,7 +45,7 @@ const pricing = () => {
                         Choose the best plan for your university or course.                        </h2>
                     </div>
                     <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full ">
-                                <Link href="/contact" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none shadow-2xl shadow-black/40">
+                                <Link href="/customrequest" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none shadow-2xl shadow-black/40">
                                     <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:pr-0 ">
                                     ✉️ {"  "} Fill this form for custom plans and query
                                     </p>

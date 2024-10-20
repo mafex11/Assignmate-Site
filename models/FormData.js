@@ -4,11 +4,12 @@ const FormDataSchema = new mongoose.Schema({
   name: String,
   email: String,
   message: String,
-  imageUrl: [{ type: String }],  
+  price: Number, // Add price field
+  imageUrl: [{ type: String }],
   createdAt: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 });
 
 const FormData = mongoose.models.FormData || mongoose.model('FormData', FormDataSchema);

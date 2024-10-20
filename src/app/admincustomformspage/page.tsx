@@ -8,6 +8,7 @@ interface FormData {
   name: string;
   email: string;
   message: string;
+  price: number;
   imageUrl: string[];
   createdAt: string;
   isTagged?: boolean; // Add optional property for tagging
@@ -92,6 +93,8 @@ const FormsPage = () => {
           {sortedForms.map(form => (
             <li key={form._id} className="border rounded-lg p-4 shadow-md bg-black">
               <h2 className="text-xl font-semibold">{form.name}</h2>
+              
+              <p className="text-gray-400 text-xl">Price: <span className="text-blue-500 font-medium ">{form.price}$</span></p>
               <p className="text-gray-400">Email: <span className="text-gray-300 font-medium">{form.email}</span></p>
               <p className="text-gray-400">
                 Message: 

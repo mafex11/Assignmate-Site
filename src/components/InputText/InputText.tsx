@@ -2,7 +2,7 @@ interface InputTextProps {
   className?: string;
   id?: string;
   name: string;
-  type?: 'text' | 'email';
+  type?: 'text' | 'email' | 'number';
   value: string; // Add the value prop
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; // Add the onChange prop
 }
