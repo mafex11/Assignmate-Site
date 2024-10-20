@@ -40,15 +40,15 @@ const contact = () => {
                         <h2 className="text-3xl lg:text-5xl font-semibold mt-6">
                         Fill the form with your details and we will get back to you ASAP.                        </h2>
                     </div>
-                    <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
-                                <Link href="#" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none shadow-2xl shadow-black">
-                                    <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:pr-0 mr-10 ">
+                    <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full ">
+                                <Link href="/customrequest" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none shadow-2xl shadow-black/40">
+                                    <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:pr-0 ">
                                     ✉️ {"  "} Fill this form for custom plans and query
                                     </p>
-                                    {/* <Button size="sm" className="rounded-full hidden lg:flex border border-foreground/20 ">
+                                    <Button size="sm" className="rounded-full hidden lg:flex border border-foreground/20">
                                         Form
                                         <ArrowRight className="w-4 h-4 ml-1" />
-                                    </Button> */}
+                                    </Button>
                                 </Link>
                             </div>
                 </Container>

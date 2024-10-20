@@ -101,7 +101,7 @@ function Form() {
             </FormRow>
 
             <FormRow className="mb-5">
-              <FormLabel htmlFor="message">Requirements & Message</FormLabel>
+              <FormLabel htmlFor="message">Message</FormLabel>
               <InputText
                 id="message"
                 name="message"

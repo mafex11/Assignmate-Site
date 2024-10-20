@@ -23,7 +23,7 @@ const AboutUs = () => {
           <Container className="flex flex-col w-full md:gap-4 py-10 md:py-20 flex-wrap max-w-4xl">
             <h1 className="text-3xl font-bold text-center mb-6">About Us</h1>
             <p className="text-justify font-light">
-              Welcome to [Business Name], your trusted partner for academic support and professional writing services. 
+              Welcome to Assignmoto, your trusted partner for academic support and professional writing services. 
               We specialize in helping students achieve their academic goals by providing high-quality, 100% handwritten essays, assignments, and projects.
               Our team of expert writers and educators is dedicated to ensuring that each piece of content is crafted from scratch, tailored to meet your unique requirements, 
               and free from any AI-generated text.
@@ -46,7 +46,7 @@ const AboutUs = () => {
 
             <h2 className="text-2xl font-semibold">Our Mission</h2>
             <p className="text-justify font-light">
-              At [Business Name], our mission is to provide students with the resources they need to excel in their academic pursuits. 
+              At Assignmoto, our mission is to provide students with the resources they need to excel in their academic pursuits. 
               We believe that personalized support and expertly crafted content can make a significant difference in helping students reach their educational goals.
             </p>
 
@@ -60,6 +60,12 @@ const AboutUs = () => {
             <p className="text-justify font-light">
               If you have any questions or would like to get started on your next assignment, feel free to contact us. 
               We’re here to help you every step of the way. Let’s make your academic journey a success together!
+              <br />
+              <br />
+              Assignmoto <br />
+              Email: Assignmoto@gmail.com <br />
+              Phone: +919328261868 <br />
+              Address: Bangalore, India.
             </p>
           </Container>
         </Wrapper>

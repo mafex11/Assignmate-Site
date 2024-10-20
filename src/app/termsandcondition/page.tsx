@@ -22,7 +22,7 @@ const TermsAndConditions = () => {
           <Container className="flex flex-col w-full md:gap-4 py-10 md:py-20 flex-wrap max-w-4xl">
             <h1 className="text-3xl font-bold text-center mb-6">Terms and Conditions</h1>
             <p className="text-justify font-light">
-              Welcome to [Business Name]. By accessing and using our website and services, you agree to comply with and be bound by the following terms and conditions. 
+              Welcome to Assignmoto. By accessing and using our website and services, you agree to comply with and be bound by the following terms and conditions. 
               Please read these terms carefully before using our services.
             </p>
 
@@ -44,13 +44,13 @@ const TermsAndConditions = () => {
 
             <h2 className="text-2xl font-semibold">3. Intellectual Property</h2>
             <p className="text-justify font-light">
-              All content, including text, graphics, logos, and software, available on our website is the property of [Business Name] and is protected by intellectual property laws.
+              All content, including text, graphics, logos, and software, available on our website is the property of Assignmoto and is protected by intellectual property laws.
               You may not reproduce, distribute, or create derivative works from any content without our express written permission.
             </p>
 
             <h2 className="text-2xl font-semibold">4. Limitation of Liability</h2>
             <p className="text-justify font-light">
-              To the fullest extent permitted by law, [Business Name] shall not be liable for any indirect, incidental, consequential, or punitive damages arising out of your use of our services, 
+              To the fullest extent permitted by law, Assignmoto shall not be liable for any indirect, incidental, consequential, or punitive damages arising out of your use of our services, 
               even if we have been advised of the possibility of such damages.
             </p>
 
@@ -77,7 +77,7 @@ const TermsAndConditions = () => {
 
             <h2 className="text-2xl font-semibold">9. Governing Law</h2>
             <p className="text-justify font-light">
-              These Terms and Conditions shall be governed by and construed in accordance with the laws of [Your Country/State]. Any disputes arising under or related to these terms shall be subject to the exclusive jurisdiction of the courts located in [Your Jurisdiction].
+              These Terms and Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising under or related to these terms shall be subject to the exclusive jurisdiction of the courts located in [Your Jurisdiction].
             </p>
 
             <h2 className="text-2xl font-semibold">10. Changes to Terms</h2>
@@ -90,10 +90,11 @@ const TermsAndConditions = () => {
             <p className="text-justify font-light">
               If you have any questions or concerns about these Terms and Conditions, please contact us at:
               <br />
-              [Business Name] <br />
-              Email: [Email Address] <br />
-              Phone: [Phone Number] <br />
-              Address: [Business Address]
+              <br />
+              Assignmoto <br />
+              Email: Assignmoto@gmail.com <br />
+              Phone: +919328261868 <br />
+              Address: Bangalore, India.
             </p>
           </Container>
         </Wrapper>

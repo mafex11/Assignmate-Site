@@ -30,7 +30,6 @@ const PrivacyPolicy = () => {
               <li>Name</li>
               <li>Email Address</li>
               <li>Phone Number</li>
-              <li>Payment Information</li>
               <li>Assignment Details and Requirements</li>
             </ul>
 
@@ -72,29 +71,30 @@ const PrivacyPolicy = () => {
               <li>Opt-out: You can opt out of receiving promotional emails.</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold">7. Cookies and Tracking Technologies</h2>
+            {/* <h2 className="text-2xl font-semibold">7. Cookies and Tracking Technologies</h2>
             <p className="text-justify font-light">
               Our website uses cookies and similar technologies to improve your experience.
-            </p>
+            </p> */}
 
-            <h2 className="text-2xl font-semibold">8. Children&apos;s Privacy</h2>
+            {/* <h2 className="text-2xl font-semibold">8. Children&apos;s Privacy</h2>
             <p className="text-justify font-light">
               Our services are not intended for individuals under the age of 18.
-            </p>
+            </p> */}
 
-            <h2 className="text-2xl font-semibold">9. Changes to This Privacy Policy</h2>
+            <h2 className="text-2xl font-semibold">7. Changes to This Privacy Policy</h2>
             <p className="text-justify font-light">
               We reserve the right to update this Privacy Policy from time to time. Any changes will be posted on this page with an updated &quot;Effective Date.&quot;
             </p>
 
-            <h2 className="text-2xl font-semibold">10. Contact Us</h2>
+            <h2 className="text-2xl font-semibold">8. Contact Us</h2>
             <p className="text-justify font-light">
               If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
               <br />
-              [Business Name] <br />
-              Email: [Email Address] <br />
-              Phone: [Phone Number] <br />
-              Address: [Business Address]
+              <br />
+              Assignmoto <br />
+              Email: Assignmoto@gmail.com <br />
+              Phone: +919328261868 <br />
+              Address: Bangalore, India.
             </p>
           </Container>
         </Wrapper>
